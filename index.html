@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>News Links</title>
+    <style>
+        /* Reset and base styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        
+        body {
+            line-height: 1.6;
+            color: #333;
+            background-color: #f8f9fa;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px;
+            background-color: white;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        /* Header styles */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        
+        h1 {
+            color: #4A90E2;
+            margin-bottom: 15px;
+        }
+        
+        /* Links list */
+        .links-list {
+            list-style-position: inside;
+            padding-left: 20px;
+        }
+        
+        .links-list li {
+            margin-bottom: 15px;
+        }
+        
+        .links-list a {
+            color: #333;
+            text-decoration: none;
+            font-size: 1.2rem;
+            transition: color 0.3s;
+            padding: 5px;
+        }
+        
+        .links-list a:hover {
+            color: #4A90E2;
+            text-decoration: underline;
+        }
+        
+        /* Footer */
+        footer {
+            margin-top: auto;
+            text-align: center;
+            padding-top: 30px;
+            font-size: 0.9rem;
+            color: #777;
+        }
+        
+        /* Media queries for responsiveness */
+        @media (max-width: 768px) {
+            .container {
+                padding: 20px;
+            }
+            
+            h1 {
+                font-size: 1.5rem;
+            }
+            
+            .links-list a {
+                font-size: 1.1rem;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 10px;
+            }
+            
+            .container {
+                padding: 15px;
+            }
+            
+            .links-list {
+                padding-left: 5px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>News Links</h1>
+        </header>
+        
+        <main>
+            <ol class="links-list">
+                <li><a href="https://www.cnn.com" target="_blank">CNN</a></li>
+                <li><a href="https://www.nytimes.com" target="_blank">New York Times</a></li>
+                <li><a href="https://www.washingtonpost.com" target="_blank">Washington Post</a></li>
+            </ol>
+        </main>
+        
+        <footer>
+            <p>Simple News Links - 2025</p>
+        </footer>
+    </div>
+</body>
+</html>
