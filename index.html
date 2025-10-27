@@ -4,6 +4,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Links</title>
+    
+    <script>
+        // ============================================
+        // EDIT YOUR LINKS HERE - Just add or remove entries in this array
+        // Format: ["Link Name", "URL"]
+        // ============================================
+        const links = [
+            ["Thesaurus", "https://thesaurus.com"],
+            ["CNN", "https://www.cnn.com"],
+            ["New York Times", "https://www.nytimes.com"],
+            ["Washington Post", "https://www.washingtonpost.com"],
+            ["The Atlantic", "https://www.theatlantic.com"],
+            ["The Register", "https://www.theregister.com/"],
+            ["Ars Technica", "https://arstechnica.com/"],
+            ["Futurism", "https://futurism.com/"]
+        ];
+        // ============================================
+    </script>
+    
     <style>
         /* Reset and base styles */
         * {
@@ -113,15 +132,8 @@
         </header>
         
         <main>
-            <ol class="links-list">
-                <li><a href="https://thesaurus.com" target="_blank">Thesaurus</a></li>
-                <li><a href="https://www.cnn.com" target="_blank">CNN</a></li>
-                <li><a href="https://www.nytimes.com" target="_blank">New York Times</a></li>
-                <li><a href="https://www.washingtonpost.com" target="_blank">Washington Post</a></li>
-                <li><a href="https://www.theatlantic.com" target="_blank">The Atlantic</a></li>
-                <li><a href="https://www.theregister.com/" target="_blank">The Register</a></li>                
-                <li><a href="https://arstechnica.com/" target="_blank">Ars Technica</a></li>
-                <li><a href="https://futurism.com/" target="_blank">Futurism</a></li>
+            <ol class="links-list" id="linksList">
+                <!-- Links will be generated here by JavaScript -->
             </ol>
         </main>
         
@@ -130,5 +142,21 @@
             <p>Edit <a href="https://github.com/aniapte/homepage/edit/main/index.html">here</a></p>
         </footer>
     </div>
+
+    <script>
+        // Generate the links list when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            const list = document.getElementById('linksList');
+            links.forEach(link => {
+                const li = document.createElement('li');
+                const a = document.createElement('a');
+                a.href = link[1];
+                a.target = '_blank';
+                a.textContent = link[0];
+                li.appendChild(a);
+                list.appendChild(li);
+            });
+        });
+    </script>
 </body>
 </html>
